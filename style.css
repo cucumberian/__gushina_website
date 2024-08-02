@@ -1,4 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
+
+    font-size: 16px;
+}
+
+.colors {
+    --white: #fff;
+    --black: #000;
+    --main-yellow: #FFB540;
+    --main-purple: #B35DFC;
+    --main-green: #56FF95;
+    --secondary-yellow: #D98500;
+    --secondary-purple: #9053B7;
+    --secondary-green: #3CC970;
+    --accent-color: #FF50B4;
+    --text-dark: #3F373B;
+    --text-light: #64555D;
+    --almost-white: #F7F7F6;
+    --gray-50: #808080;
+    --gray-95: #F2F2F2;
+}
+
+.sizes {
+    --1200-h2-margin: 80px;
+    --1200-section-top: 100px;
+    --1200-section-bottom: 100px;
+    --1200-container-px: 10px;
+    --768-h2-margin: 50px;
+    --768-section-top: 80px;
+    --768-section-bottom: 80px;
+    --360-h2-margin: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
