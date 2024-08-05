@@ -41,16 +41,18 @@ html {
     --section-bottom: 100px;
     --container-px: 10px;
 
-    --360-h2-margin: 40px;
+    --s360-h2-margin: 40px;
+    --s360-section-top: 40px;
+    --s360-section-bottom: 40px;
 }
 
-@media (720 < width < 960) {
+/* @media (720 < width < 960) {
     .sizes {
         --h2-margin: 50px;
         --section-top: 80px;
         --section-bottom: 80px;
     }
-}
+} */
 
 .gray-bg {
     background-color: var(--almost-white);
@@ -204,14 +206,68 @@ header {
     }
 }
 
-@media (width <=1200px) {
+#benefits {
+    .benefits-content {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 100%;
+        max-width: 792px;
+    }
+
+    .benefit {
+        display: grid;
+        grid-template-areas: "left right";
+        grid-template-columns: 1fr 1fr;
+        align-content: center;
+        gap: 24px;
+        width: 100%;
+
+        h3 {
+            font-size: 24px;
+            text-align: right;
+            font-weight: bolder;
+            color: var(--text-light);
+            grid-area: left;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 300;
+            color: var(--text-light);
+            grid-area: right;
+        }
+    }
+
+    .benefit-reverse {
+        h3 {
+            grid-area: right;
+            text-align: left;
+        }
+
+        p {
+            grid-area: left;
+        }
+    }
+}
+
+@media (width <=900px) {
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: var(--s360-section-top);
+        padding-bottom: var(--s360-section-bottom)
+    }
+
     .container {
         max-width: 320px;
     }
 
     h2 {
         font-size: 32px;
-        margin-bottom: var(--360-h2-margin);
+        margin-bottom: var(--s360-h2-margin);
     }
 
     header {
@@ -260,4 +316,35 @@ header {
         }
     }
     
+    #benefits {
+        .benefits-content {
+            gap: 35px;
+            padding: 0 20px;
+            width: 100%;
+            max-width: 320px;
+        }
+    
+        .benefit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+    
+            h3 {
+                font-size: 18px;
+                text-align: center;
+            }
+    
+            p {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    
+        .benefit-reverse {
+            h3 {
+                text-align: center;
+            }
+        }
+    }
 }
