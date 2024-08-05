@@ -73,9 +73,6 @@ h2 {
     text-align: center;
 }
 
-/* p {
-    font-size: 10px;
-} */
 
 section {
     width: 100%;
@@ -552,6 +549,12 @@ footer {
     align-items: center;
     justify-content: center;
 
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
     .container {
         display: flex;
         flex-direction: row;
@@ -562,11 +565,11 @@ footer {
             height: 40px;
         }
 
-        .right-link {
+        .right-link>p {
             text-decoration: none;
             font-size: 12px;
             font-weight: 300;
-            line-height: 100%;
+            line-height: 140%;
             color: var(--text-light);
         }
     }
@@ -784,11 +787,8 @@ footer {
                 height: 28px;
             }
 
-            .right-link {
+            .right-link>p {
                 font-size: 10px;
-                font-weight: 300;
-                line-height: 100%;
-                color: var(--text-light);
             }
         }
     }
