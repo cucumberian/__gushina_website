@@ -46,14 +46,6 @@ html {
     --s360-section-bottom: 40px;
 }
 
-/* @media (720 < width < 960) {
-    .sizes {
-        --h2-margin: 50px;
-        --section-top: 80px;
-        --section-bottom: 80px;
-    }
-} */
-
 .gray-bg {
     background-color: var(--almost-white);
 }
@@ -91,7 +83,7 @@ section {
     flex-direction: column;
     align-items: center;
     padding-top: var(--section-top);
-    padding-bottom: var(--section-bottom)
+    padding-bottom: var(--section-bottom);
 }
 
 .container {
@@ -102,10 +94,15 @@ section {
     align-items: center;
 }
 
+.orange-grad {
+    background: linear-gradient(135deg, #DA9172 0%, #CA724D 100%);
+}
 
+.purple-grad {
+    background: linear-gradient(135deg, #B083CC 0%, #9D75B6 100%);
+}
 
 /* HEADER */
-
 header {
     width: 100%;
     height: 100px;
@@ -156,6 +153,7 @@ header {
         max-width: 792px;
     }
 }
+
 
 #with-us {
     .content {
@@ -258,6 +256,70 @@ header {
     }
 }
 
+#teachers {
+    .container {
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .subheader {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: var(--h2-margin);
+            color: var(--text-light);
+        }
+
+        .content {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .teacher {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                .teacher-portrait-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 32px;
+
+                    img {
+                        width: 180px;
+                        border-radius: 50%;
+                    }
+
+                    .teacher-name {
+                        font-size: 24px;
+                        font-weight: lighter;
+                        color: var(--text-dark);
+                        text-align: center;
+                    }
+                }
+
+                .teacher-card {
+                    padding: 30px 34px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 22px;
+                    justify-content: center;
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: var(--white);
+                        line-height: 120%;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 #trenings {
     .trenings-container {
         display: flex;
@@ -337,9 +399,9 @@ header {
     }    
 }
 
-
 #directors {
     position: relative;
+
     .header-bg {
         position: absolute;
         z-index: -1;
@@ -350,7 +412,7 @@ header {
         clip-path: polygon(0 0, 100% 0, 100% 360px, 0 400px);
         background-color: var(--almost-white);
     }
-    
+
     h2 {
         margin-bottom: 8px;
     }
@@ -362,6 +424,7 @@ header {
         margin-bottom: var(--h2-margin);
         color: var(--text-light);
     }
+
     .directors-list {
         display: flex;
         flex-direction: column;
@@ -373,7 +436,7 @@ header {
             max-width: 881px;
             background-color: #f0f0f0;
             border-radius: 5px;
-            
+
             display: flex;
             padding: 30px;
             gap: 20px;
@@ -383,7 +446,7 @@ header {
                 width: 200px;
                 border-radius: 3px;
             }
-            
+
             .director-content {
                 display: flex;
                 flex-direction: column;
@@ -394,6 +457,7 @@ header {
                     font-weight: lighter;
                     color: var(--text-dark);
                 }
+
                 .text-container {
                     display: flex;
                     flex-direction: column;
@@ -401,7 +465,7 @@ header {
 
                     p {
                         font-size: 16px;
-                        font-weight: light;
+                        font-weight: 300;
                         color: var(--text-light);
                     }
                 }
@@ -410,7 +474,105 @@ header {
     }
 }
 
-    
+
+#after {
+    .container {
+        h4 {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .content {
+            width: 100%;
+            padding: 35px 0;
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+
+            .column {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                p {
+                    padding: 40px;
+                    background-color: #F8f9f8;
+                    border-radius: 3px;
+
+                    font-size: 16px;
+                    line-height: 140%;
+                    font-weight: lighter;
+                    color: var(--text-light);
+                }
+            }
+        }
+    }
+}
+
+
+#banner {
+    .content {
+        width: 100%;
+        max-width: 912px;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        h2 {
+            width: 100%;
+            max-width: 588px;
+            text-align: left;
+            color: var(--text-dark);
+        }
+
+        p {
+            width: 100%;
+            max-width: 486px;
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--text-light)
+        }
+    }
+}
+
+
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: var(--gray-95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-logo {
+            height: 40px;
+        }
+
+        .right-link {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 100%;
+            color: var(--text-light);
+        }
+    }
+}
+
+
 @media (width <=1200px) {
     .container {
         max-width: 320px;
@@ -422,6 +584,8 @@ header {
     }
 
     header {
+        height: 50px;
+
         .header-logo img {
             max-height: 20px
         }
@@ -471,9 +635,53 @@ header {
         }
     }
 
+    #teachers {
+        .container {
+            .subheader {
+                font-size: 14px;
+                margin-bottom: var(--360-h2-margin);
+            }
+
+            .content {
+                width: 100%;
+                max-width: 1100px;
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .teacher {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .teacher-portrait-container {
+                        gap: 15px;
+                        margin-bottom: 15px;
+
+                        .teacher-name {
+                            font-size: 22px;
+                        }
+                    }
+
+                    .teacher-card {
+                        border-radius: 5px;
+                        gap: 16px;
+
+
+                        p {
+                            line-height: 140%;
+                            font-size: 16px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     #directors {
         position: relative;
+
         .header-bg {
             display: none;
         }
@@ -482,49 +690,34 @@ header {
             font-size: 16px;
             margin-bottom: var(--360-h2-margin);
         }
+
         .directors-list {
-
             .director {
-                widtH: 100%;
-                max-width: 881px;
-                background-color: #f0f0f0;
-                border-radius: 5px;
+                padding: 40px 30px;
+                flex-direction: column;
+            }
+        }
+    }
 
-                display: flex;
-                padding: 30px;
-                gap: 20px;
-                align-items: center;
+    #after {
+        .container {
+            h4 {
+                font-size: 20px;
+            }
 
-                .director-image {
-                    width: 200px;
-                    border-radius: 3px;
-                }
+            .content {
+                flex-direction: column;
 
-                .director-content {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 18px;
-
-                    h5 {
-                        font-size: 20px;
-                        font-weight: lighter;
-                        color: var(--text-dark);
-                    }
-                    .text-container {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 10px;
-
-                        p {
-                            font-size: 16px;
-                            font-weight: light;
-                            color: var(--text-light);
-                        }
+                .column {
+                    p {
+                        padding: 20px;
+                        font-size: 14px;
                     }
                 }
             }
         }
     }
+
     
     #benefits {
         .benefits-content {
@@ -557,4 +750,47 @@ header {
             }
         }
     }
+
+
+    #banner {
+        .content {
+            width: 100%;
+            max-width: 320px;
+            position: relative;
+
+            img {
+                width: 50px
+            }
+
+            h2 {
+                max-width: 280px;
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 10px;
+            }
+
+            p {
+                max-width: 320px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    footer {
+        height: 50px;
+
+        .container {
+            .footer-logo {
+                height: 28px;
+            }
+
+            .right-link {
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 100%;
+                color: var(--text-light);
+            }
+        }
+    }
+
 }
