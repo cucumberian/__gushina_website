@@ -12,6 +12,20 @@
 
   <header>
     <div class="container">
+
+
+      <div class="row hamburger-button">
+        <div class="three col">
+          <div class="hamburger" id="hamburger-5">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+      </div>
+
+
+
       <div class="header-logo">
         <img src="./static/img/header-icon.svg" alt="тренинги софьи гущиной">
       </div>
@@ -19,27 +33,88 @@
       <div class="header-menu">
         <nav>
           <ul>
-            <li>Наши эксперты</li>
-            <li>Тренинги</li>
-            <li>Отзывы</li>
-            <li>Контакты</li>
+            <li>
+              <a href="/#teachers">Наши эксперты</a>
+            </li>
+
+            <li>
+              <a hreg="/#trainings">Тренинги</a>
+            </li>
+
+            <li>
+              <a href="/#feedbacks">Отзывы</a>
+            </li>
+
+            <li>
+              <a href="/#contacts">Контакты</a>
+            </li>
           </ul>
         </nav>
       </div>
 
       <div class="header-icons">
-        <a href="tel:">tel</a>
+        <a href="tel:+79246509882">+7 (924) 650-98-82</a>
 
-        <a href="mailto:"></a>
+        <!-- <a href="mailto:school.gushina@mail.ru">school.gushina@mail.ru</a> -->
 
-        <a href="https://www.instagram.com/">insta</a>
+        <a href="https://www.instagram.com/">
+          <img src="/static/img/instagram-icon.svg" alt="instagram">
+        </a>
 
-        <a href="http://vk.com">VK</a>
+        <a href="http://vk.com">
+          <img src="/static/img/vk-icon.svg">
+        </a>
 
-        <a href="https://www.youtube.com/">Telega</a>
+        <a href="https://telegram.org">
+          <img src="./static/img/tel-icon.svg">
+        </a>
       </div>
     </div>
   </header>
+
+
+
+  <div class="mobile-menu--background">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-content hide">
+        <nav>
+          <ul>
+            <li>
+              <a href="/#contacts">Наши эксперты</a>
+            </li>
+
+            <li>
+              <a href="/#trainings">Тренинги</a>
+            </li>
+
+            <li>
+              <a href="#feedbacks">Отзывы</a>
+            </li>
+
+            <li>
+              <a href="/#contacts">Контакты</a>
+            </li>
+
+            <li class="mobile-menu-contacts">
+              <a href="tel:+79246509882">+7 (924) 650-98-82 </a>
+
+              <div class="mobile-menu-icons">
+                <a href="vk.com">
+                  <img src="/static/img/vk-icon.svg" width=30>
+                </a>
+
+                <a href="https://instagrmc.com">
+                  <img src="static/img/instagram-icon.svg" width=30>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+
+        </nav>
+      </div>
+    </div>
+  </div>
 
   <main>
     <section id="main-section">
@@ -327,3 +402,20 @@
 </body>
 
 </html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<script>
+  $(document).ready(function () {
+    console.log('load script');
+
+
+    $(".hamburger-button").click(function () {
+      console.log("click");
+      $(".hamburger").toggleClass("is-active");
+      $(".mobile-menu-content").toggleClass("hide");
+    });
+  });
+</script>
