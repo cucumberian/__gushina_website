@@ -559,6 +559,90 @@ header {
     }
 }
 
+#trenings {
+    .trenings-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 1140px;
+    }
+
+    .trenings-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .trening {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 30px 30px;
+        gap: 20px;
+        width: 100%;
+        max-width: 556px;
+        background-color: var(--white);
+        border-radius: 7px;
+    }
+
+    .text-under-img {
+        font-size: 10px;
+        color: var(--text-light);
+    }
+
+    .bottom-h2-text {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 300;
+        color: var(--text-light);
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        max-width: 496px;
+        height: 372px;
+
+        
+    }
+
+    h3 {
+        font-size: 20px;
+        text-align: left;
+        font-weight: bold;
+        color: var(--text-light);
+    }
+
+    .text {
+        font-size: 14px;
+        text-align: left;
+        font-weight: 100;
+        color: var(--text-light);
+    }
+
+    .text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        height: 40px;
+        width: 100%;
+        max-width: 496px;
+        background-color: #E6E6E6;
+        border: none;
+        border-radius: 7px;
+        color: var(--text-dark);
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    
+}
 
 #after {
     .container {
@@ -599,6 +683,76 @@ header {
     }
 }
 
+
+#reviews {
+    .reviews-content {
+        display: flex;
+        width: 100%;
+        max-width: 1140px;
+        overflow: hidden;
+    }
+
+    .slider {
+        margin: auto;
+        position: relative;
+        width: 100%;
+
+        .sliders {
+            display: flex;
+            gap: 18px;
+            position: relative;
+            transition-duration: 0.3s;
+            width: fit-content;
+        }
+    }
+
+
+    .review {
+        width: 270px;
+        height: 550px;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 19px 20px;
+        border-radius: 10px;
+    }
+      
+    div img {
+        object-fit: cover;
+        width: 121px;
+        height: 121px;
+        border-radius: 100%;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        border: none;
+        background-color: var(--almost-white);
+    }
+
+    button img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .button_cont {
+        display: flex;
+        gap: 50px;
+        margin-top: 50px;
+    }
+
+
+}
 
 #banner {
     .content {
@@ -828,6 +982,39 @@ footer {
                 flex-direction: column;
             }
         }
+    }
+
+    #trenings {
+        .trenings-container {
+            max-width: 320px;
+        }
+
+        .trenings-content {
+            flex-direction: column;
+        }
+
+        .bottom-h2-text {
+            font-size: 16px;
+        }
+
+        .trening {
+            padding: 15px 15px;
+            gap: 15px;
+            background-color: var(--white);
+            border-radius: 7px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            max-width: 290px;
+            height: 231px;
+    }
+    
     }
 
     #after {
