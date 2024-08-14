@@ -21,7 +21,8 @@ function previousReview(){
 }
 
 function nextReview(){
-    if (counter === -(lengthElement-4)) return;
+    if (widthEl === 320 && counter === -(lengthElement - 1)) return;
+    if (widthEl === 270 && counter === -(lengthElement - 4)) return;
     counter = counter - 1;
     rewiewsContainer.style.transform = `translateX(${counter * multiplier}px)`;
 }
